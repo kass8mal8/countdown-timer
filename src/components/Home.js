@@ -5,14 +5,12 @@ import HourView from "./HourView"
 
 const Home = () => {
     const d = new Date()
-    const hours = d.getHours()
-    const day = 31 - (d.getDate())
-    const hrs = (day * 24) - hours
-    const rem_days = Math.floor(hrs / 24)
+    const hrs = ( (31 - (d.getDate())) * 24) - d.getHours()
+    const [rem_days, setRemDays] = useState(Math.floor(hrs / 24))
 
     const [mins, setMins] = useState(d.getMinutes())
     const [secs, setSecs] = useState(d.getSeconds())    
-    const [rem_hrs, setRemHrs] = useState(hrs % 24)
+    const [rem_hrs, setRemHrs] = useState((hrs % 24) - 1)
     const [rem_mins, setRemMins] = useState(60 - (mins + 1))
     
 
@@ -28,15 +26,20 @@ const Home = () => {
                 setMins(0)
                 setRemHrs(rem_hrs - 1)
             }
+            if(rem_hrs < 1){
+                setRemDays(rem_days - 1)
+                setRemHrs(23)
+            }
             
         }
         updateTime( secs)
-    },[secs, rem_hrs, rem_mins])
+    },[secs, rem_hrs, rem_mins, rem_days])
+    console.log(rem_days);
 
     return ( 
         <div className="timer">
             
-            {rem_hrs !== 48 ? 
+            {rem_days > 1 ? 
                 <DayView 
                     rem_days = {rem_days}
                     rem_hrs ={rem_hrs}
@@ -44,8 +47,10 @@ const Home = () => {
                     secs = {secs}  /> : 
                 <HourView 
                     rem_hrs ={rem_hrs}
+                    rem_days = {rem_days}
                     rem_mins = {rem_mins}
-                    secs = {secs} /> 
+                    secs = {secs}
+                    setRemHrs = {setRemHrs} /> 
             }
 
         </div>

@@ -1,0 +1,69 @@
+.message-container{
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+}
+
+img{
+    padding: 2px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+form{
+    background: rgb(241, 239, 239);
+    position: absolute;
+    padding: 30px;
+    bottom: 10%;
+    right: 10%;
+    display: none;
+}
+
+form.active{
+    display: block;
+}
+
+
+form p{
+    position: absolute;
+    top: -30px;right: 0px;
+    transform: rotate(45deg);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+form input{
+    display: block;
+    border: 1px solid rgb(199, 198, 198);
+    outline: none;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.message:hover{
+    opacity: 0.85;
+}
+
+button{
+    background: rgb(139, 139, 228);
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(139, 139, 228);
+    border-radius: 5px;
+    font-family: inter;
+    color: whitesmoke;
+}
+
+@media screen and (max-width:500px) {
+    form{
+        right: 190%;
+        bottom: 490%;
+        padding: 20px;
+    }
+    form p{
+        top: -30px;
+        right: -60px;
+    }
+}

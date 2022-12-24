@@ -1,7 +1,7 @@
 const Header = () => {
     return ( 
         <div className="header">
-            <h2># _countdown</h2>
+            <h2># 2023_countdown</h2>
         </div>
      );
 }

@@ -15,8 +15,10 @@
 }
 
 .footer{
-    margin-top: 450px;
-    font-size: small;
+    position: absolute;
+    bottom: 10px;
+    left: 110px;
+    font-size: x-small;
 }
 
 h1{
@@ -30,7 +32,7 @@ h1{
     }
     .footer{
         position: relative;
-        margin-top: 40%;
+        margin-top: 41%;
         left: auto;
     }
 }
