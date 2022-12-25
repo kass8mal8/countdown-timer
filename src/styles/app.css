@@ -6,6 +6,8 @@
 .app-container{
     font-family: inter;
     text-align: center;
+    width: 95%;
+    margin-left: 10px;
 }
 
 ul li{
@@ -17,4 +19,12 @@ ul li{
 
 .time li{
     margin-right: 20px;
+}
+
+
+@media screen and (min-width:800px) {
+    .app-container{
+        width: 85%;
+        margin-left: 120px;
+    }
 }

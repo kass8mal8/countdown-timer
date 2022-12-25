@@ -1,13 +1,11 @@
 .timer{
     background: rgb(241, 239, 239);
     padding: 10px;
-    width: 85%;
-    left: 18px;
     top: 25%;
-    position: absolute;
     font-weight: bold;
     border: 1px solid rgb(241, 239, 239);
     border-radius: 5px;
+    margin-top: 60px;
 }
 
 .header{
@@ -26,13 +24,5 @@ h1{
 }
 
 @media screen and (min-width:800px) {
-    .timer{
-        width: 70%;
-        left: 15%;
-    }
-    .footer{
-        position: relative;
-        margin-top: 41%;
-        left: auto;
-    }
+
 }
