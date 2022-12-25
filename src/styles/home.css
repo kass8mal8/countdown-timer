@@ -16,7 +16,12 @@
     position: absolute;
     bottom: 10px;
     left: 110px;
-    font-size: x-small;
+    font-size: small;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
 }
 
 h1{
@@ -24,5 +29,7 @@ h1{
 }
 
 @media screen and (min-width:800px) {
-
+    .footer{
+        left: 50%;
+    }
 }

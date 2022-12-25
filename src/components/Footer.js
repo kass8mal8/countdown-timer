@@ -1,7 +1,7 @@
 const Footer = () => {
     return ( 
         <div className="footer">
-            <p> copyright 2023 @countdown_timer </p> 
+            Coded by <a href="https://github.com/kass8mal8">kass8mal8</a>
         </div>
      );
 }
