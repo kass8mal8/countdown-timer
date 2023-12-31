@@ -1,5 +1,5 @@
 const HourView = ({rem_hrs, rem_mins, rem_days, setRemHrs, secs}) => {
-    rem_hrs = (rem_hrs - new Date().getHours()) - 1
+    rem_hrs = rem_hrs - new Date().getHours()
     return ( 
         <div>
             <ul>
