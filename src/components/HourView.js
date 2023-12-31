@@ -1,5 +1,5 @@
 const HourView = ({rem_hrs, rem_mins, rem_days, setRemHrs, secs}) => {
-    rem_hrs = ((rem_days * 24) + rem_hrs)
+   // rem_hrs = ((rem_days * 24) + rem_hrs)
     return ( 
         <div>
             <ul>
