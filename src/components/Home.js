@@ -9,7 +9,7 @@ const Home = () => {
     const [rem_days, setRemDays] = useState(Math.floor(hrs / 24))
 
     const [secs, setSecs] = useState(d.getSeconds())    
-    const [rem_hrs, setRemHrs] = useState((hrs % 24) - 1)
+    const [rem_hrs, setRemHrs] = useState((hrs % 24) )
     const [rem_mins, setRemMins] = useState(60 - d.getMinutes())
     
 
